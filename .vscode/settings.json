@@ -1,0 +1,48 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/__pycache__": true
+    },
+    "git.enabled": true,
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--line-length=120"
+    ],
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": false,
+    "python.linting.pylintEnabled": true,
+    "python.linting.flake8Args": [
+        "--ignore=E501",
+        "--verbose"
+    ],
+    "python.testing.unittestArgs": [
+        "-v3",
+        "-s",
+        ".",
+        "-p",
+        "test_*.py"
+    ],
+    "python.testing.pytestArgs": [
+        "."
+    ],
+    "python.linting.pylintArgs": [
+        "--load-plugins",
+        "pylint_django",
+        "--django-settings-module",
+        "dw_app.settings",
+    ],
+    "python.linting.pydocstyleArgs": [
+        "--ignore=D400",
+        "--ignore=D4"
+    ],
+    "python.linting.pylamaEnabled": false,
+    "python.pythonPath": "/usr/bin/python3",
+}
